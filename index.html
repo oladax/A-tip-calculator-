@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./tip.css">
+    <title>A tip calculator</title>
+</head>
+<body>
+    <!--the main section for tip calculator-->
+   <main class="main">
+    <section class="sectionall">
+        <div class="bill">
+            <label class="bill-label" for="Bill total">Bill total</label>
+            <input class="bill-input"  type="text" name=""   
+            id="bill-inputs"
+            placeholder="0.00">
+            <span class="absolute">$</span>
+        </div>
+        <div class="tip-bill">
+            <label class="bill-tip" for="Tip">Tip</label>
+            <input  class="bill-tips" type="text" name="" id="tipinput"   
+            placeholder="10">
+            <span class="absolute">%</span>
+        </div>
+        <!--here was supposed to be a 'onkeyup' replaced with button-->
+        <div >
+            <button class="button" onclick="calculatebill();">calculate</button>
+        </div>
+        <section class="second-section">
+
+            <div class="people-container">
+                <p>People</p>
+               <p  class="paragraph">
+                 <button id="plus" class="button-plus" onclick="increasepeople()">+ </button>
+                <span id="numberofpeoplediv" class="span-one">1</span>
+                <button id="minus" onclick="decreasepeople()" class="button-minus">-</button></p>
+               </div>
+            
+
+            <div class="total-div">
+                <p>Total per person</p>
+                <p id="perpersontotal">$0.00  <br></p> 
+            </div>
+        </section>
+    </section>
+   </main>
+    <script src="./tip.js"></script>
+</body>
+</html>

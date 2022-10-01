@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+ box-shadow:   12px 12px 20px blue,
+    -12px -12px 20px blue;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+
+/*/ the main body of the calculator/*/
+.sectionall{
+    width: 349px;
+    height: 456px;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-style: outset;
+    border-bottom-width: 23px; 
+    box-shadow: 12px 12px 20px #ACE7F8,
+    -12px -12px 20 #ACE7F8;
+   
+}
+.paragraph{
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    flex-shrink: none;
+}
+
+.main{
+background-color: blue;
+
+    
+}
+/*/ the input and lable for bills/*/
+
+.bill, .tip-bill{
+    display: grid;
+    row-gap: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.bill-label , .bill-tip{
+    color: white;
+    font-size: 16px;
+    font-style: oblique;
+    font-weight: 700;
+    font-family:'Gill Sans', 'Gill Sans MT',
+     Calibri, 'Trebuchet MS', sans-serif;
+     text-align: start;
+}
+.bill-input, .bill-tips{
+    color: white;
+    width: 300px;
+    margin-bottom: 22px;
+    height: 36px;
+    border-width: thin;
+    border-radius: 50px;
+    position: relative;
+    text-align: center;
+    border-style: solid;
+    border: none;
+    outline: none;
+    background-color: #CBF3F9;
+    color: cornflowerblue;
+    box-shadow: inset 8px 8px 20px #CBF3F9,
+inset -8px -8px 20px #CBF3F9;
+}
+.bill-input::placeholder, .bill-tips::placeholder{
+    color: cornflowerblue;
+    font-size: 12px;
+    padding-left: 10px;
+}
+.second-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    color: white;  
+    font-family:'Gill Sans', 'Gill Sans MT',
+    Calibri, 'Trebuchet MS', sans-serif; 
+    vertical-align: top;    
+}
+.total-div{
+    padding-left: 120px;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    
+}
+
+ .button-plus, .button-minus
+ {
+    letter-spacing: 20px;
+    background-color: cornsilk;
+    border: none;
+    border-radius: 50px;
+    height: 35px;
+    width: 35px;
+    padding-left: 13px;
+    font-size: 20px;
+    color: cornflowerblue;
+    margin-left: -7px;
+    margin-right: -5px;
+    cursor: pointer;
+    box-shadow: inset 8px 8px 20px white,
+    inset -8px -8px 20px white; 
+    transition-delay: 1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+.span-one{
+    margin-left: 6px;
+    margin-right: 10px;    
+}
+.absolute{
+    font-size: 14px;
+    position: absolute;
+    color: cornflowerblue;
+    bottom: 31px;
+    left: 2px;    
+}
+.button{
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: inset 8px 8px 8px white,
+    inset -8px -8px 8px white;
+    border: none;
+    padding: 10px;
+    color: cornflowerblue;
+    cursor: pointer;
+    transition: 1.1s ease-in;
+}
+
+.button:hover, .button-plus:hover, .button-minus:hover{
+    background-color: #ACE7F8;
+    box-shadow: inset 8px 8px 8px #ACE7F8,
+    inset -8px -8px 8px #ACE7F8;
+    color: white;
+
+}
+
+.button:active .button-plus:hover, .button-minus:hover{
+    background-color: cornflowerblue;
+    box-shadow: inset 8px 8px 8px cornflowerblue,
+    inset -8px -8px 8px cornflowerblue;
+    color: white;
+}
+
+@media screen and (max-width: 320px) {
+    
+    .sectionall{
+        margin-top: -6px;
+        background-color: cornflowerblue;
+        position: relative;
+        left: 2%;
+        height: fit-content;
+        width: 92%; 
+        padding-top: 33px;
+        padding-bottom: 20px;
+        
+    }
+    .bill-input, .bill-tips{
+        background-color: cornflowerblue;
+        width: 214px;
+        height: 34px;
+        background-color: #CBF3F9;
+        color: cornflowerblue;
+        box-shadow: inset 8px 8px 20px #CBF3F9,
+    inset -8px -8px 20px #CBF3F9;
+    
+    }
+
+    .bill, .tip-bill{
+        position: relative;
+        left: -7px;}
+
+
+    .bill-label , .bill-tip{
+        color: white;
+        font-size: 16px;
+        font-style: oblique;
+        font-weight: 700;
+        font-family:'Gill Sans', 'Gill Sans MT',
+         Calibri, 'Trebuchet MS', sans-serif;
+         text-align: start;
+        
+        }  
+    
+    .people-container{
+        position: relative;
+        left: 25px; 
+    }
+
+    .button{
+        position: relative;
+    right: 21px;
+    }
+    
+
+    .total-div{
+        position: relative;
+        right: 33px; 
+    }
+    }
+
+    @media screen and (max-width: 375px){
+        .sectionall{
+           position: relative;
+           left: 13px;
+            
+        }
+    }
+
+        
+
+
