@@ -4,36 +4,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./tip.css">
-    <title>A tip calculator</title>
+    <title>Tip calculator</title>
 </head>
 <body>
     <!--the main section for tip calculator-->
-   <main class="main">
-    <section class="sectionall">
-        <div class="bill">
+   <main >
+
+    <!--section that holds the entire content-->
+    <section>
+
+    <!--Container for bill total-->
+        <div class="bill-total">
             <label class="bill-label" for="Bill total">Bill total</label>
-            <input class="bill-input"  type="text" name=""   
+            <input class="bill-input"  type="number" name=""   
             id="bill-inputs"
             placeholder="0.00">
-            <span class="absolute">$</span>
+            <span class="Dollar">$</span>
         </div>
+
+        <!--Container for tip bill-->
         <div class="tip-bill">
-            <label class="bill-tip" for="Tip">Tip</label>
-            <input  class="bill-tips" type="text" name="" id="tipinput"   
+            <label class="tip-label" for="Tip">Tip</label>
+            <input  class="tip-input" type="number" name="" id="tipinput"   
             placeholder="10">
-            <span class="absolute">%</span>
+            <span class="Dollar">%</span>
         </div>
-        <!--here was supposed to be a 'onkeyup' replaced with button-->
-        <div >
-            <button class="button" onclick="calculatebill();">calculate</button>
-        </div>
-        <section class="second-section">
+
+        <!--Paragraph that holds the button that does the calculation-->
+            
+        <p class="Calc"><button class="btn" onclick="calculatebill();">calculate</button></p>
+        
+        <footer>
 
             <div class="people-container">
-                <p>People</p>
+                <p class="people">People</p>
+
                <p  class="paragraph">
                  <button id="plus" class="button-plus" onclick="increasepeople()">+ </button>
-                <span id="numberofpeoplediv" class="span-one">1</span>
+                <span id="numberofpeoplediv" >1</span>
                 <button id="minus" onclick="decreasepeople()" class="button-minus">-</button></p>
                </div>
             
@@ -42,7 +50,7 @@
                 <p>Total per person</p>
                 <p id="perpersontotal">$0.00  <br></p> 
             </div>
-        </section>
+        <footer>
     </section>
    </main>
     <script src="./tip.js"></script>
